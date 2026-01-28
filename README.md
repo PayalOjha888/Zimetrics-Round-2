@@ -93,13 +93,21 @@ mvn spring-boot:run
 
   
 
-6. Future Improvements
-If I had 2 more days, I would add:
+5. Future Improvements
 
-- Global Exception Handling: To return custom user-friendly error messages instead of standard Spring stack traces.
+- Frontend Integration (React.js)
+Logic: I plan to build a full-featured Dashboard using React.js and Material-UI (or Bootstrap). This will include a responsive table to display the library inventory, intuitive forms for adding new books, and a real-time search bar for instant filtering.
 
-- Swagger/OpenAPI Documentation: To provide an interactive UI for testing the endpoints without needing Postman.
+Why: This will eliminate the dependency on API clients like Postman for end-users and provide a seamless, user-friendly experience.
 
-- Unit Testing: Implement JUnit and Mockito tests for the Service layer logic.
+- Global Exception Handling
+Logic: Currently, the API returns default Spring Boot error stack traces. I intend to implement a @ControllerAdvice class to intercept exceptions and return standardized, clean JSON error responses (e.g., specific messages for 404 Not Found or 400 Bad Request).
+
+Why: Professional error handling makes the API more secure, predictable, and easier for frontend developers to integrate with.
+
+- Pagination and Sorting
+Logic: As the library inventory grows to thousands of records, fetching all data at once will impact performance. I plan to implement the Pageable interface in the Service layer to allow for paginated results and alphabetical sorting of book titles.
+
+Why: This will significantly improve the API's scalability and reduce memory consumption on both the server and client sides.
 
 
