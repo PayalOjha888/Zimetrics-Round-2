@@ -1,9 +1,11 @@
 ## Library Management API (In-Memory)
 
 1. Project Title & Goal
+   
 This is a robust RESTful API built with Spring Boot to manage a library book inventory using strictly in-memory (H2) storage, designed for efficient book tracking and retrieval.
 
-2. 2. Setup Instructions
+3. 2. Setup Instructions
+      
 To run this project locally, follow these steps:
 
 - Clone the repository
@@ -18,7 +20,7 @@ mvn clean install
 - Run the application
 mvn spring-boot:run
 
-The API will be available at http://localhost:8080
+  The API will be available at http://localhost:8080
 
 3. The Logic (How I thought)
 - Approach: I chose Spring Boot with Spring Data JPA because it allows for rapid development and clean separation of concerns (Controller-Service-Repository pattern).
