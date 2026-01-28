@@ -96,18 +96,18 @@ mvn spring-boot:run
 5. Future Improvements
 
 - Frontend Integration (React.js)
-Logic: I plan to build a full-featured Dashboard using React.js and Material-UI (or Bootstrap). This will include a responsive table to display the library inventory, intuitive forms for adding new books, and a real-time search bar for instant filtering.
+Logic: I plan to build a full-featured Dashboard using React.js and Tailwind CSS. This will include a responsive table to display the library inventory, intuitive forms for adding new books, and a real-time search bar for instant filtering.
 
-Why: This will eliminate the dependency on API clients like Postman for end-users and provide a seamless, user-friendly experience.
+   Why: This will eliminate the dependency on API clients like Postman for end-users and provide a seamless, user-friendly experience.
 
 - Global Exception Handling
 Logic: Currently, the API returns default Spring Boot error stack traces. I intend to implement a @ControllerAdvice class to intercept exceptions and return standardized, clean JSON error responses (e.g., specific messages for 404 Not Found or 400 Bad Request).
 
-Why: Professional error handling makes the API more secure, predictable, and easier for frontend developers to integrate with.
+  Why: Professional error handling makes the API more secure, predictable, and easier for frontend developers to integrate with.
 
 - Pagination and Sorting
 Logic: As the library inventory grows to thousands of records, fetching all data at once will impact performance. I plan to implement the Pageable interface in the Service layer to allow for paginated results and alphabetical sorting of book titles.
 
-Why: This will significantly improve the API's scalability and reduce memory consumption on both the server and client sides.
+  Why: This will significantly improve the API's scalability and reduce memory consumption on both the server and client sides.
 
 
