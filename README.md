@@ -4,7 +4,7 @@
    
 This is a robust RESTful API built with Spring Boot to manage a library book inventory using strictly in-memory (H2) storage, designed for efficient book tracking and retrieval.
 
-3. 2. Setup Instructions
+2. Setup Instructions
       
 To run this project locally, follow these steps:
 
