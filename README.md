@@ -27,8 +27,30 @@ mvn spring-boot:run
 - The Hardest Bug: Initially, I faced a HttpMessageNotReadableException (400 Bad Request) where JSON keys weren't mapping to Java primitives. I fixed this by using the @JsonProperty("year") annotation and switching from int to Integer to handle potential null values gracefully during deserialization.
 - Storage: Since "strictly in-memory" was required, I configured an H2 Database that clears on every restart, ensuring no persistent junk data.
 
+4. Output Screenshots
+   - Connecting the in-memory database: H2
+  
+     
+   - Adding the book details to the database through API: [POST]http://localhost:8080/api/addBooks
+  
+     
+   - Resultant modification shown in h2-console
+  
+     
+   - Fetching all the books through API: [GET]http://localhost:8080/api/showAllBooks
+  
+     
+   - Fetching Books filtered by year through API: [GET]http://localhost:8080/api/books/search?year=2002
+  
+     
+   - Delete the book by id through the API: [DELETE]http://localhost:8080/api/removeBook/{id}
 
-5. Future Improvements
+
+   - Fetching the books from empty dataset giving 204(No Content) in response through API: [GET]http://localhost:8080/api/books/search?year=2002
+  
+     
+
+6. Future Improvements
 If I had 2 more days, I would add:
 
 - Global Exception Handling: To return custom user-friendly error messages instead of standard Spring stack traces.
